@@ -6,7 +6,7 @@ from .serializers import MenuSerializer, BookingSerializer
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'index.html', {'title': 'Restaurant App'})
 
 
 class MenuItemView(generics.ListCreateAPIView):
