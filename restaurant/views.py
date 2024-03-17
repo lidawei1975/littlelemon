@@ -10,13 +10,13 @@ def index(request):
 
 
 class MenuItemView(generics.ListCreateAPIView):
+    
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
 class MenuDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-
 
 
 class BookingViewSet(viewsets.ModelViewSet):
